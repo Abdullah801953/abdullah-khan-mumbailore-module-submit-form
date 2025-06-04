@@ -7,6 +7,7 @@ const SubmitForm = () => {
         title: '',
         body: ''
     });
+    const URL="https://abdullah-khan-mumbailore-module-submit.onrender.com"
 
     const [errors, setErrors] = useState({});
     const [successMessage, setSuccessMessage] = useState('');
@@ -45,7 +46,7 @@ const SubmitForm = () => {
         setErrors({});
 
         try {
-            const res = await fetch('/api/submit-lore', {
+            const res = await fetch(`${URL}/api/submit-lore`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
